@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" 
+minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="665.0"
+ xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+ 
+ fx:controller="vista.controlador.controladoralumno"
+ 
+ >
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="491.0" prefWidth="665.0">
+      <children>
+        <Label layoutX="16.0" layoutY="30.0" text="Nombre:" />
+        <Label layoutX="14.0" layoutY="67.0" text="A.Paterno" />
+        <Label layoutX="292.0" layoutY="67.0" text="A.Materno:" />
+        <Label layoutX="14.0" layoutY="109.0" text="Fecha de Nacimiento:" />
+        <Label layoutX="14.0" layoutY="147.0" text="Sexo:" />
+        <TextField fx:id="txtNombre" layoutX="79.0" layoutY="27.0" prefWidth="167.0" />
+        <TextField id="txtapaterno" fx:id="txtApaterno" layoutX="79.0" layoutY="64.0" prefWidth="167.0" />
+        <TextField id="txtamaterno" fx:id="txtAmaterno" layoutX="365.0" layoutY="64.0" prefWidth="181.0" />
+        <TextField id="txtfecha" fx:id="txtFecha" layoutX="139.0" layoutY="109.0" prefWidth="167.0" />
+        <Label layoutX="16.0" layoutY="182.0" text="Carrera:" />
+        <ComboBox  fx:id="cbosexo" layoutX="68.0" layoutY="148.0" prefHeight="21.0" prefWidth="85.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Masculino" />
+              <String fx:value="Femenino" />
+             
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <ComboBox id="btncarrera" fx:id="cbocarrera" layoutX="67.0" layoutY="183.0" prefHeight="21.0" prefWidth="87.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+            
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <Button id="btnguardar" fx:id="btnGuardar" layoutX="107.0" layoutY="225.0" mnemonicParsing="false" text="GUARDAR" onAction="#guardar" />
+        <Button id="btneliminar" fx:id="btnEliminar" layoutX="250.0" layoutY="225.0" mnemonicParsing="false" text="ELIMINAR" onAction="#eliminar"/>
+        <Button id="btnmodificar" fx:id="btnModificar" layoutX="400.0" layoutY="226.0" mnemonicParsing="false" text="MODIFICAR"  />
+        <TableView fx:id="tblalumnos" layoutX="28.0" layoutY="269.0" prefHeight="200.0" prefWidth="528.0">
+         
+        </TableView>
+        <Label fx:id="lblmensaje" layoutX="259.0" layoutY="155.0" prefWidth="287.0" text="Mensaje:" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

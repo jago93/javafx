@@ -1,0 +1,2 @@
+jfx.build.stagingdir = ${workspace}/SHDJair/build
+jfx.build.apptitle = SHDJair

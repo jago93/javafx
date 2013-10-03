@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" 
+minWidth="-Infinity" prefHeight="334.0" prefWidth="492.0" xmlns:fx="http://javafx.com/fxml/1"
+ xmlns="http://javafx.com/javafx/2.2" fx:controller="vista.controlador.controladorventana">
+  <children>
+    <Pane layoutX="0.0" layoutY="-1.0" prefHeight="335.0" prefWidth="513.0">
+      <children>
+        <ToolBar layoutX="0.0" layoutY="0.0" prefWidth="492.0">
+          <items>
+            <Button fx:id="btnguardar" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
+            <Button fx:id="btneliminar" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+            <Button fx:id="btnmodificar" mnemonicParsing="false" onAction="#actualizar" text="Modificar" />
+          </items>
+        </ToolBar>
+        <Label layoutX="28.0" layoutY="71.0" text="Nombre" />
+        <Label layoutX="28.0" layoutY="106.0" text="Siglas" />
+        <Label layoutX="27.0" layoutY="148.0" text="Jefe de Carrera:" />
+        <Label layoutX="27.0" layoutY="183.0" text="Matricula" />
+        <Label layoutX="28.0" layoutY="219.0" text="Acreditado" />
+        <TextField fx:id="txtnombre" layoutX="93.0" layoutY="68.0" prefWidth="200.0" />
+        <TextField fx:id="txtsiglas" layoutX="93.0" layoutY="103.0" prefWidth="200.0" />
+        <TextField fx:id="txtjefe" layoutX="115.0" layoutY="142.0" prefWidth="178.0" />
+        <TextField fx:id="txtmatricula" layoutX="93.0" layoutY="183.0" prefWidth="200.0" />
+        <ComboBox fx:id="cboacreditado" layoutX="93.0" layoutY="218.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="SI" />
+              <String fx:value="No" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <TableView fx:id="tblcarrera" layoutX="10.0" layoutY="244.0" prefHeight="91.0" prefWidth="475.0">
+          <columns>
+            <TableColumn prefWidth="75.0" text="ID" fx:id="colid">
+              <cellValueFactory>
+                <PropertyValueFactory property="idcarrera" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Nombre" fx:id="colnombre">
+              <cellValueFactory>
+                <PropertyValueFactory property="nombre" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Siglas" fx:id="colsiglas">
+              <cellValueFactory>
+                <PropertyValueFactory property="siglas" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Jefe" fx:id="coljefe">
+              <cellValueFactory>
+                <PropertyValueFactory property="jefe" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="colmatricula" prefWidth="75.0" text="Matricula">
+              <cellValueFactory>
+                <PropertyValueFactory property="matricula" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn id="colacreditada" maxWidth="5000.0" minWidth="10.0" prefWidth="101.0" text="Acreditada">
+              <cellValueFactory>
+                <PropertyValueFactory property="acreditado" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+        <Label fx:id="lblmensaje" layoutX="193.0" layoutY="221.0" prefWidth="212.0" text="Mensaje:" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
