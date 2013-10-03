@@ -9,7 +9,7 @@ import modelo.conexion;
 
 public class alumnos {
 
-	
+	//clase alumnos
 	private String nombre;
 	private String apaterno;
 	private String amaterno;
