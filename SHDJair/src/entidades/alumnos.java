@@ -21,6 +21,8 @@ public class alumnos {
 	public alumnos() {
 	}
 	
+	/*hola!! tenias un error*/
+	
 	public alumnos(String n, String ap,String am, String fe,String sex,carrera carr){
 		
 		setNombre(n);
